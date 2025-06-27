@@ -21,12 +21,10 @@ var x = 1;
             }
             ugh = result;
         }
-        arguments.callee.log(ugh);
+        console.log(ugh);
     };
     meaningless.log = function(s) {
-        setTimeout(function() {
             console.log(s);
-        }, 0);
     };
     var something = setInterval(function() {
         meaningless(x++);

@@ -1,0 +1,17 @@
+SELECT 
+    u.username,
+    u.email,
+    SUM(o.amount) AS total_spent
+FROM 
+    users u
+JOIN 
+    orders o ON u.id = o.user_id
+GROUP BY 
+    u.id, u.username, u.email
+ORDER BY 
+    total_spent DESC;
+
+
+//This query returns the username, email and the total amount spent by each user and then displays them in descending order
+
+//Tested in MySQL workbench
